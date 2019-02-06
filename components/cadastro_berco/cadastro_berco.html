@@ -1,0 +1,72 @@
+<!--Title-->
+<div class="panel-header">
+    <div class="header text-left">
+        <h1 class="title" style="padding-top:16px;">Berços</h1>
+    </div>
+</div>
+<div class="content" ng-controller="cadastroBercoController">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card card-stats">
+                <div class="card-body">
+                    <h5 class="card-title">Cadastro de Berço</h5>
+                    <div class="justify-content-center row">
+                        <div class="form-group col-sm-6">
+                            <label class="col-form-label">Nome</label>
+                            <input id="txtNome" type="text" id="txtNome" class="form-control" placeholder="Nome...">
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label class="col-form-label">Sigla</label>
+                            <input id="txtSigla" type="text" class="form-control" placeholder="Sigla...">
+                        </div>
+                    </div>
+                    <div class="justify-content-center row">
+                        <button class="justify-content-center btn btn-success" onclick="cadastrarBerco()">Cadastrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <div id="div_tabela">
+                        <table id="tblBerco" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">Nome</th>
+                                    <th class="text-center">Sigla</th>
+                                    <th class="text-center">Finalizar</th>
+                                </tr>
+                            </thead>
+                            <tfoot>
+                                <tr>
+                                    <th class="text-center">Nome</th>
+                                    <th class="text-center">Sigla</th>
+                                    <th class="text-center">Finalizar</th>
+                                </tr>
+                            </tfoot>
+                            <tbody>
+                                <tr>
+                                    <td class="text-center">Pérola Negra</td>
+                                    <td class="text-center">Navios porta-barcaças</td>
+                                    <td class="text-center">
+                                        <button type="button" rel="tooltip" class="btn btn-simple btn-round btn-icon btn-sm "
+                                            data-original-title="" title="">
+                                            <i class="now-ui-icons ui-1_simple-remove"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- end content-->
+            </div>
+            <!--  end card  -->
+        </div>
+        <!-- end col-md-12 -->
+    </div>
+    <!-- end row -->
+</div>

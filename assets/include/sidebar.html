@@ -1,0 +1,231 @@
+<div class="sidebar" data-color="spi">
+    <!--
+        Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
+    -->
+    <div class="logo">
+        <a href="" style="overflow:unset" class="simple-text logo-mini">
+            SGB
+        </a>
+        <a href="" class="simple-text logo-normal">
+            YARA
+        </a>
+        <div class="navbar-minimize">
+            <button id="minimizeSidebar" class="btn btn-simple btn-icon btn-neutral btn-round">
+                <i class="now-ui-icons text_align-center visible-on-sidebar-regular"></i>
+                <i class="now-ui-icons design_bullet-list-67 visible-on-sidebar-mini"></i>
+            </button>
+        </div>
+    </div>
+
+
+    <div class="sidebar-wrapper">
+
+        <!-- User Informations-->
+        <div class="user">
+            <div class="info">
+                <a data-toggle="collapse" href="#collapseExample" class="collapsed text-center">
+                    <span>
+                        
+                    </span>
+                </a>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <ul class="nav">
+
+            <!--Cadastros-->
+            <li ng-class="{active: isActive('/cadastros') }">
+                <a data-toggle="collapse" data-target="#cadastros" href="">
+                    <i style="line-height: 30px;" class="now-ui-icons files_single-copy-04"></i>
+                    <p>
+                        Cadastros
+                        <b class="caret"></b>
+                    </p>
+                </a>
+                <div class="collapse " id="cadastros">
+                    <ul class="nav">
+                        <!--Usuários-->
+                        <li ng-class="{active: isActive('/cadastro_usuarios') }">
+                            <a href="#/cadastro_usuarios">
+                                <i style="line-height: 30px; width:34px;" class="far fa-user"></i>
+                                <p>Usuários</p>
+                            </a>
+                        </li>
+                        <!--Embarcações-->
+                        <li ng-class="{active: isActive('/cadastro_embarcacao') }">
+                            <a href="#/cadastro_embarcacao">
+                                <i style="line-height: 30px; width:34px;" class="now-ui-icons objects_support-17"></i>
+                                <p>Embarcações</p>
+                            </a>
+                        </li>
+                        <!--Empresas-->
+                        <li ng-class="{active: isActive('/cadastro_empresas') }">
+                            <a href="#/cadastro_empresas">
+                                <i style="line-height: 30px;width:34px;" class="now-ui-icons business_briefcase-24"></i>
+                                <p>Empresas</p>
+                            </a>
+                        </li>
+                        <!--Produtos-->
+                        <li ng-class="{active: isActive('/cadastro_produtos') }">
+                            <a href="#/cadastro_produtos">
+                                <i style="line-height: 30px; width:34px;" class="now-ui-icons shopping_box"></i>
+                                <p>Produtos</p>
+                            </a>
+                        </li>
+                        <!--DI-->
+                        <li ng-class="{active: isActive('/cadastro_operacao') }">
+                            <a href="#/cadastro_operacao">
+                                <i style="line-height: 30px; width:34px;" class="now-ui-icons files_paper"></i>
+                                <p>Operação</p>
+                            </a>
+                        </li>
+                        <!--DI-->
+                        <li ng-class="{active: isActive('/cadastro_porto') }">
+                            <a href="#/cadastro_porto">
+                                <i style="line-height: 30px; width:34px;" class="now-ui-icons files_paper"></i>
+                                <p>Porto</p>
+                            </a>
+                        </li>
+                        <!--DI-->
+                        <li ng-class="{active: isActive('/cadastro_berco') }">
+                            <a href="#/cadastro_berco">
+                                <i style="line-height: 30px; width:34px;" class="now-ui-icons files_paper"></i>
+                                <p>Berço</p>
+                            </a>
+                        </li>
+                        <!--DI-->
+                        <li ng-class="{active: isActive('/cadastro_terminal') }">
+                            <a href="#/cadastro_terminal">
+                                <i style="line-height: 30px; width:34px;" class="now-ui-icons files_paper"></i>
+                                <p>Terminal</p>
+                            </a>
+                        </li>
+                         <!--Tolerância-->
+                         <li ng-class="{active: isActive('/cadastro_tolerancia') }">
+                            <a href="#/cadastro_tolerancia">
+                                <i style="line-height: 30px; width:34px;" class="now-ui-icons files_paper"></i>
+                                <p>Tolerância RF</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <!--Operacional-->
+            <li ng-class="{active: isActive('/operacional')}">
+                <a data-toggle="collapse" data-target="#operacional" href="">
+                    <i style="line-height: 30px; width:34px;" class="now-ui-icons ui-2_settings-90"></i>
+                    <p>
+                        Operacional
+                        <b class="caret"></b>
+                    </p>
+                </a>
+                <div class="collapse " id="operacional">
+                    <ul class="nav">
+                        <!--Tela de Operação-->
+                        <li ng-class="{active: isActive('/monitoramento_descarga') }">
+                            <a href="#/monitoramento_descarga">
+                                <i style="line-height: 30px; width:34px;" class="now-ui-icons business_globe"></i>
+                                <p>Monitoramento de Descarga</p>
+                            </a>
+                        </li>
+
+                        <!--Monitoramento-->
+                        <li ng-class="{active: isActive('/tela_monitoramento_rfb') }">
+                            <a href="#/tela_monitoramento_rfb">
+                                <i style="line-height: 30px; width:34px;" class="now-ui-icons education_glasses"></i>
+                                <p>Monitoramento RFB</p>
+                            </a>
+                        </li>
+
+                        <!--Monitoramento-->
+                        <li ng-class="{active: isActive('/consulta_rf') }">
+                            <a href="#/consulta_rf">
+                                <i style="line-height: 30px; width:34px;" class="now-ui-icons objects_spaceship"></i>
+                                <p>Consulta RF</p>
+                            </a>
+                        </li>
+
+                        <!--Liberação de Descarga-->
+                        <li ng-class="{active: isActive('/liberacao_descarga') }">
+                            <a href="#/liberacao_descarga">
+                                <i style="line-height: 30px; width:34px;" class="now-ui-icons ui-1_lock-circle-open"></i>
+                                <p>Liberação Descarga</p>
+                            </a>
+                        </li>
+
+                        <!--Descarga Manual-->
+                        <li ng-class="{active: isActive('/pesagem') }">
+                            <a href="#/pesagem">
+                                <i style="line-height: 30px; width:34px;" class="now-ui-icons gestures_tap-01"></i>
+                                <p>Pesagem</p>
+                            </a>
+                        </li>
+
+                        <!--Descarga Manual-->
+                        <li ng-class="{active: isActive('/descarga_manual') }">
+                            <a href="#/descarga_manual">
+                                <i style="line-height: 30px; width:34px;" class="now-ui-icons gestures_tap-01"></i>
+                                <p>Descarga Manual</p>
+                            </a>
+                        </li>
+
+                         <!--Transferência De Pesagem-->
+                         <li ng-class="{active: isActive('/transferencia_pesagem') }">
+                            <a href="#/transferencia_pesagem">
+                                <i style="line-height: 30px; width:34px;" class="now-ui-icons loader_refresh"></i>
+                                <p>Transferência de Pesagem</p>
+                            </a>
+                        </li>
+
+                        <!--Rateio-->
+                        <li ng-class="{active: isActive('/rateio') }">
+                            <a href="#/rateio">
+                                <i style="line-height: 30px; width:34px;" class="now-ui-icons design_scissors"></i>
+                                <p>Rateio</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </li>
+
+            <!--Relatórios-->
+            <li ng-class="{active: isActive('/Relatórios')}">
+                <a data-toggle="collapse" data-target="#relatorios" href="">
+                    <i style="line-height: 30px; width:34px;" class="now-ui-icons business_chart-pie-36"></i>
+                    <p>
+                        Relatórios
+                        <b class="caret"></b>
+                    </p>
+                </a>
+                <div class="collapse " id="relatorios">
+                    <ul class="nav">
+
+                        <!--Relatório de Descarga-->
+                        <li ng-class="{active: isActive('/relatorio') }">
+                            <a href="#/relatorio">
+                                <i style="line-height: 30px; width:34px;" class="now-ui-icons business_chart-bar-32"></i>
+                                <p>Relatório de Descarga</p>
+                            </a>
+                        </li>
+                        <!--Relatório Diário do Terminal-->
+                        <li ng-class="{active: isActive('/relatorio_diario_terminal') }">
+                            <a href="#/relatorio_diario_terminal">
+                                <i style="line-height: 30px; width:34px;" class="now-ui-icons business_chart-bar-32"></i>
+                                <p>Relatório Diario do Terminal</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <!--Relatório Diário do Terminal-->
+            <li ng-class="{active: isActive('/ajuda') }">
+                <a href="#/ajuda">
+                    <i style="line-height: 30px; width:34px;" class="now-ui-icons business_bulb-63"></i>
+                    <p>Ajuda</p>
+                </a>
+            </li>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+<!--Title-->
+<div class="panel-header">
+    <div class="header text-left">
+        <h1 class="title" style="padding-top:16px;">Transferências de Pesagem</h1>
+    </div>
+</div>
+<div class="content" ng-controller="transferencia_pesagem">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card card-stats">
+                <div class="card-body">
+                    <div class="justify-content-center row">
+                        <div class="form-group col-sm-12">
+                            <label class="col-form-label">Escala RF</label>
+                            <input id="txtEscalaRF" type="text" class="form-control" placeholder="Escala RF...">
+                        </div>
+                    </div>
+                    <div class="justify-content-center row">
+                        <button onclick="montaTabelaTransf()" class="btn btn-primary">Buscar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <div id="div_tabela">
+                        <table id="tblTransPesa" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                        </table>
+                    </div>
+                    <div id="buttonFooter" class="justify-content-center row">
+                    </div>
+                </div>
+                <!-- end content-->
+            </div>
+            <!--  end card  -->
+        </div>
+        <!-- end col-md-12 -->
+    </div>
+    <!-- end row -->
+</div>

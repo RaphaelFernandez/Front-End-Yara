@@ -1,0 +1,194 @@
+            <!--Title-->
+            <div class="panel-header"></div>
+            <div class="content" ng-controller="relatorioController">
+                    <div class="row">
+                            <div class="col-md-12">
+                                <div class="card card-stats">
+                                    <div class="card-body">
+                                        <h3 class="card-title text-center">Selecionar</h3>
+                                            <div class="justify-content-center row">
+                                                    <div class="form-group col-sm-6">
+                                                            <label class="col-form-label">Navio</label>
+                                                            <select type="text" class="form-control" id="cmbNavio">
+                                                                <option value="Todos">SPI</option>
+                                                                <option value="MQ1">Yara</option>
+                                                                <option value="MQ1">Yara 2</option>
+                                                            </select></div>
+                                                    <div class="form-group col-sm-6">
+                                                            <label class="col-form-label">Plano de Descarga</label>
+                                                            <select type="text" class="form-control" id="cmbPlano">
+                                                                <option value="Todos">SPI</option>
+                                                                <option value="MQ1">Yara</option>
+                                                                <option value="MQ1">Yara 2</option>
+                                                            </select> </div>
+                                                </div>
+                                            <div class="justify-content-center row">
+                                            <button class="justify-content-center btn btn-primary" onclick="buscar()" type="button">Buscar Dados</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card card-stats">
+                            <div class="card-body">
+                                <h3 class="card-title text-center">Relatório</h3>
+                                <div class="justify-content-center row">
+
+                                        <div class="form-group col-sm-2">
+                                            <label class="col-form-label">N° Certificados</label>
+                                            <input id="certificados" type="text" class="form-control" value="3456/18" disabled>
+                                        </div>
+
+                                        <div class="form-group col-sm-2">
+                                                <label class="col-form-label">Navio</label>
+                                                <input id="navio" type="text" class="form-control" value="3456/18" disabled>
+                                            </div>
+                                        <div class="form-group col-sm-2">
+                                            <label class="col-form-label">Agência</label>
+                                            <select id="agencia" type="text" class="form-control" disabled>
+                                                <option value="Todos">SPI</option>
+                                                <option value="MQ1">Yara</option>
+                                                <option value="MQ1">Yara 2</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group col-sm-2">
+                                            <label class="col-form-label">Terminal Responsável</label>
+                                            <input id="responsavel" type="text" class="form-control" value="Raphael Fernandez" disabled>
+                                        </div>
+
+                                        <div class="form-group col-sm-2">
+                                            <label class="col-form-label">Berço Atracação</label>
+                                            <input id="berco" type="text" class="form-control" value="Norte" disabled />
+                                        </div>
+
+                                        <div class="form-group col-sm-2">
+                                                <label class="col-form-label">Total Descarregado</label>
+                                                <input id="total" type="text" class="form-control" value="10.453" disabled />
+                                            </div>
+                                </div>
+                                <div class="justify-content-center row ">
+                                    <div class="form-group col-sm-3">
+                                        <label class="col-form-label">Data de Atracação</label>
+                                        <input id="atracacao1" type="text" class="form-control" value="15/07/2018 12:25" disabled>
+                                    </div>
+
+                                    <div class="form-group col-sm-3">
+                                        <label class="col-form-label">Data de Início</label>
+                                        <input id="inicio1" type="text" class="form-control" value="15/07/2018 14:00" disabled>
+                                    </div>
+
+                                    <div class="form-group col-sm-3">
+                                        <label class="col-form-label">Data de Término</label>
+                                        <input id="termino1" type="text" class="form-control" value="17/07/2018 21:55" disabled>
+                                    </div>
+
+                                    <div class="form-group col-sm-3">
+                                        <label class="col-form-label">Data de Desatração</label>
+                                        <input id="desatracao1" type="text" class="form-control" value="18/07/2018 08:15" disabled>
+                                    </div>         
+                                </div>
+
+                                <div class="justify-content-center row ">
+                                    <div class="form-group col-sm-3">
+                                        <label class="col-form-label">Data de Atracação</label>
+                                        <input id="atracacao2" type="text" class="form-control" value="15/07/2018 12:25" disabled>
+                                    </div>
+
+                                    <div class="form-group col-sm-3">
+                                        <label class="col-form-label">Data de Início</label>
+                                        <input id="inicio2" type="text" class="form-control" value="15/07/2018 14:00" disabled>
+                                    </div>
+
+                                    <div class="form-group col-sm-3">
+                                        <label class="col-form-label">Data de Término</label>
+                                        <input id="termino2" type="text" class="form-control" value="17/07/2018 21:55" disabled>
+                                    </div>
+
+                                    <div class="form-group col-sm-3">
+                                        <label class="col-form-label">Data de Desatração</label>
+                                        <input id="desatracao2" type="text" class="form-control" value="18/07/2018 08:15" disabled>
+                                    </div>         
+                                </div>
+
+                                <div class="justify-content-center row">
+                                        <div class="form-group col-sm-12">
+                                            <label class="col-form-label">Observações</label>
+                                            <input id="observacao" type="text" class="form-control" value="Do volume total descarregado de sulfato de Armonio" disabled>
+                                        </div>
+
+                                        <div class="form-group col-sm-12">
+                                            <label class="col-form-label">Método de Quantificação Oficial</label>
+                                            <input id="metodo" type="text" class="form-control" value="Balança e Draft nas barcaças a contrabordo" disabled>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <table id="datatable" class="table table-striped table-bordered table-hover" cellspacing="0" width="100%">
+                                    <h4>NCM/Providência
+                                    </h4>
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center">Produto</th>
+                                            <th class="text-center">NCM</th>
+                                            <th class="text-center">País/Porto Procêdencia</th>
+                                            <th class="text-center">BL</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center">Ureia</td>
+                                            <td class="text-center">8798263</td>
+                                            <td class="text-center">Brasil/RIG</td>
+                                            <td class="text-center">8798263</td>
+
+                                            <tr>
+                                                <td class="text-center">Acido</td>
+                                                <td class="text-center">8793743</td>
+                                                <td class="text-center">Brasil/Acre</td>
+                                                <td class="text-center">8724653</td>
+                                            </tr>
+                                        </tr>            
+                                    </tbody>
+                                </table>
+
+                                <div> 
+                                        <div class="justify-content-center row ">
+                                        <div class="form-group col-sm-4">
+                                                <label class="col-form-label">Assinatura</label>
+                                                <select type="text" class="form-control" id="cmbAssinatura">
+                                                    <option value="Todos">Gerson</option>
+                                                    <option value="MQ1">Wagner</option>
+                                                    <option value="MQ1">Claudinei</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-sm-8">
+                                            <label class="col-form-label">Observações</label>
+                                            <textarea rows="4" class="form-control" cols="50" id="txtObs">
+                                            </textarea>
+                                            </div>
+                                            </div>
+                                    </div>
+
+                                    <div class="justify-content-center row">
+                                            <button id="pdf_button" class="justify-content-center btn btn-success">Gerar</button>
+                                        </div>
+                            </div>
+                            
+                           
+                            <!-- end content-->
+                        </div>
+                        <!--  end card  -->
+                    </div>
+                    <!-- end col-md-12 -->
+                </div>
+                <!-- end row -->
+            </div>

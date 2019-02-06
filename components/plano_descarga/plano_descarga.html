@@ -1,0 +1,150 @@
+<!--Title-->
+<div class="panel-header">
+    <div class="header text-left">
+        <h1 class="title" style="padding-top:16px;">Plano de Descarga</h1>
+    </div>
+</div>
+<div class="content" ng-controller="planoDescargaController">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card card-stats">
+                <div class="card-body">
+                    <h5 class="card-title">Cadastro de Plano de Descarga</h5>
+                    <div class="justify-content-center row">
+                        <div class="form-group col-sm-3">
+                            <label class="col-form-label">DI</label>
+                            <select type="text" class="form-control">
+                                <option value="Todos">321423SUB</option>
+                                <option value="MQ1">321423SUB</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-3">
+                            <label class="col-form-label">Navio</label>
+                            <select type="text" class="form-control">
+                                <option value="Todos">Pérola Negra</option>
+                                <option value="MQ1">Fighter</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-3">
+                            <label class="col-form-label">Porto Origem</label>
+                            <select type="text" class="form-control">
+                                <option value="Todos">Singapura</option>
+                                <option value="MQ1">Sul</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-3">
+                            <label class="col-form-label">Terminal Origem</label>
+                            <select type="text" class="form-control">
+                                <option value="Todos">Chui</option>
+                                <option value="MQ1">Pier 2</option>
+                            </select> </div>
+                    </div>
+                    <div class="justify-content-center row">
+                        <div class="form-group col-sm-3">
+                            <label class="col-form-label">Medidor</label>
+                            <select type="text" class="form-control">
+                                <option value="Todos">Balança</option>
+                                <option value="MQ1">Barcaça</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-3">
+                            <label class="col-form-label">Ordenação</label>
+                            <input type="number" class="form-control" placeholder="Ordenação...">
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label class="col-form-label">Berço de Destino</label>
+                            <select type="text" class="form-control">
+                                <option value="Todos">Cordova</option>
+                                <option value="MQ1">Barcaça</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="justify-content-center row">
+                        <button class="justify-content-center btn btn-success">Cadastrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="card-stats">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="form-group col-sm-3">
+                                    <label class="col-form-label">Selecione o Navio</label>
+                                    <select type="text" class="form-control">
+                                        <option value="Todos">Todos</option>
+                                        <option value="MQ1">dawdawd</option>
+                                        <option value="MQ1">dawdawdawdawdaw</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-sm-3">
+                                    <div><label>&nbsp</label></div>
+                                    <button class="btn btn-primary">Buscar</button>
+                                </div>
+
+                            </div>
+                            <div id="div_tabela"></div>
+                            <table id="tblPlanoDescarga" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">DI</th>
+                                        <th class="text-center">Navio</th>
+                                        <th class="text-center">Porto Origem</th>
+                                        <th class="text-center">Terminal Origem</th>
+                                        <th class="text-center">Medidor</th>
+                                        <th class="text-center">Ordenação</th>
+                                        <th class="text-center">Berço de Destino</th>
+                                        <th class="text-center">Opções</th>
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                    <tr>
+                                        <th class="text-center">DI</th>
+                                        <th class="text-center">Navio</th>
+                                        <th class="text-center">Porto Origem</th>
+                                        <th class="text-center">Terminal Origem</th>
+                                        <th class="text-center">Medidor</th>
+                                        <th class="text-center">Ordenação</th>
+                                        <th class="text-center">Berço de Destino</th>
+                                        <th class="text-center">Opções</th>
+                                    </tr>
+                                </tfoot>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-center">1231231</td>
+                                        <td class="text-center">SPI</td>
+                                        <td class="text-center">Guanabara</td>
+                                        <td class="text-center">Rio de Janeiro</td>
+                                        <td class="text-center">Balança</td>
+                                        <td class="text-center">1</td>
+                                        <td class="text-center">Chui</td>
+                                        <td class="text-center">
+                                            <button type="button" rel="tooltip" class="btn btn-simple btn-round btn-icon btn-sm"
+                                                onclick="editar_plano('1231231','500','Yara Live','SPI','Site')"
+                                                data-original-title="" title="">
+                                                <i class="fa fa-edit"></i>
+                                            </button>
+                                            <button type="button" rel="tooltip" class="btn btn-simple btn-round btn-icon btn-sm "
+                                                onclick="deletar_di('1231231','500','Yara Live','SPI','Site')"
+                                                data-original-title="" title="">
+                                                <i class="now-ui-icons ui-1_simple-remove"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- end content-->
+                        </div>
+                        <!--  end card  -->
+                    </div>
+                </div>
+                <!-- end col-md-12 -->
+            </div>
+            <!-- end row -->
+        </div>

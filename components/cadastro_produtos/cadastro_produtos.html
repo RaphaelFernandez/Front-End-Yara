@@ -1,0 +1,95 @@
+<!--Title-->
+<div class="panel-header">
+    <div class="header text-left">
+        <h1 class="title" style="padding-top:16px;">Produtos</h1>
+    </div>
+</div>
+<div class="content" ng-controller="cadastroProdutosController">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card card-stats">
+                <div class="card-body">
+                    <h5 class="card-title">Cadastro de Produto</h5>
+                    <div class="justify-content-center row">
+                        <div class="form-group col-sm-3">
+                            <label class="col-form-label">Nome</label>
+                            <input type="text" id="txtProduto" class="form-control" placeholder="Nome...">
+                        </div>
+                        <div class="form-group col-sm-3">
+                            <label class="col-form-label">Numéro NCM</label>
+                            <input type="text" id="txtNCM" class="form-control" placeholder="NCM...">
+                        </div>
+                        <div class="form-group col-sm-3">
+                            <label class="col-form-label">Código SAP</label>
+                            <input type="text" id="txtSAP" class="form-control" placeholder="SAP...">
+                        </div>
+                        <div class="form-group col-sm-3">
+                            <label class="col-form-label">Tipo de Produto</label>
+                            <select id="cmbTipoProduto" type="text" class="form-control">
+                                <option value="1">A Granel</option>
+                                <option value="2">Ácido</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="justify-content-center row">
+                        <button onclick="cadastrarProdutos()" class="justify-content-center btn btn-success">Cadastrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <div id="div_tabela">
+                        <table id="tblProdutos" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">Nome</th>
+                                    <th class="text-center">Descrição</th>
+                                    <th class="text-center">Tipo de Produto</th>
+                                    <th class="text-center">Unidade de Medida</th>
+                                    <th class="text-center">Código SAP</th>
+                                    <th class="text-center">Opções</th>
+                                </tr>
+                            </thead>
+                            <tfoot>
+                                <tr>
+                                    <th class="text-center">Nome</th>
+                                    <th class="text-center">Descrição</th>
+                                    <th class="text-center">Tipo de Produto</th>
+                                    <th class="text-center">Unidade de Medida</th>
+                                    <th class="text-center">Código SAP</th>
+                                    <th class="text-center">Opções</th>
+                                </tr>
+                            </tfoot>
+                            <tbody>
+                                <tr>
+                                    <td class="text-center">Pedro Rezende</td>
+                                    <td class="text-center">S1/2018</td>
+                                    <td class="text-center">CEO</td>
+                                    <td class="text-center">C1111E3123O</td>
+                                    <td class="text-center">ipedromr</td>
+                                    <td class="text-center">
+                                        <button type="button" rel="tooltip" class="btn btn-simple btn-round btn-icon btn-sm"
+                                            onclick="showSwal('editar_produto')" data-original-title="" title="">
+                                            <i class="fa fa-edit"></i>
+                                        </button>
+                                        <button type="button" rel="tooltip" class="btn btn-simple btn-round btn-icon btn-sm "
+                                            data-original-title="" title="">
+                                            <i class="now-ui-icons ui-1_simple-remove"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- end content-->
+                </div>
+                <!--  end card  -->
+            </div>
+            <!-- end col-md-12 -->
+        </div>
+        <!-- end row -->
+    </div>

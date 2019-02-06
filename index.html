@@ -1,0 +1,671 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="yara">
+
+<head>
+
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="assets/img/logo.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>
+        Sistema Gestão Balanças Yara
+    </title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+    <link href="assets/css/all.css" rel="stylesheet">
+    <!-- CSS Files -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/now-ui-dashboard.css?v=1.1.2" rel="stylesheet" />
+    <link href="assets/css/jquery.dataTables.min.css" rel="stylesheet">
+
+    <link href="assets/css/pickr.min.css" rel="stylesheet" />
+
+</head>
+
+<body class="sidebar-mini" ng-controller="mainController">
+
+    <div class="wrapper">
+
+        <div ng-include="'assets/include/sidebar.html'"></div>
+
+        <div class="main-panel">
+            <div class="logo-yara">
+
+                <img src="assets/img/logo.png" alt="Logo" width="3%" align="justify" style="float:left;margin: 10px;">
+
+            </div>
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-transparent  navbar-absolute bg-primary " style="box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);">
+
+
+                <div class="container-fluid">
+                    <div class="navbar-wrapper">
+                        <div class="navbar-toggle">
+                            <button type="button" class="navbar-toggler">
+                                <span class="navbar-toggler-bar bar1"></span>
+                                <span class="navbar-toggler-bar bar2"></span>
+                                <span class="navbar-toggler-bar bar3"></span>
+                            </button>
+                        </div>
+                        <a class="navbar-brand" href="#pablo"></a>
+                    </div>
+                </div>
+            </nav>
+
+            <ng-view></ng-view>
+
+        </div>
+    </div>
+
+    <!--   Core JS Files   -->
+    <script src="assets/js/core/angular.min.js"></script>
+    <script src="assets/js/core/angular-route.min.js"></script>
+    <script src="assets/js/core/jquery.min.js"></script>
+    <script src="assets/js/core/popper.min.js"></script>
+    <script src="assets/js/core/bootstrap.min.js"></script>
+    <script src="assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+    <script src="assets/js/plugins/moment.min.js"></script>
+    <script src="assets/js/core/phaser.min.js"></script>
+    <script src="assets/js/core/konva.min.js"></script>
+    <script src="assets/js/core/jspdf.min.js"></script>
+    <script src="assets/js/core/jspdf.plugin.autotable.js"></script>
+    <script src="assets/js/plugins/jquery.blockUI.js"></script>
+
+
+    <!-- Routes -->
+    <script src="assets/include/routesConfig.js"></script>
+
+    <!-- Controllers -->
+    <script src="assets/include/mainController.js"></script>
+    <script src="components/cadastro_usuarios/cadastroUsuariosController.js"></script>
+    <script src="components/cadastro_empresas/cadastroEmpresasController.js"></script>
+    <script src="components/cadastro_produtos/cadastroProdutosController.js"></script>
+    <script src="components/cadastro_operacao/cadastroOperacaoController.js"></script>
+    <script src="components/cadastro_tolerancia/cadastroToleranciaController.js"></script>
+    <script src="components/cadastro_embarcacao/cadastroEmbarcacaoController.js"></script>
+    <script src="components/cadastro_berco/cadastroBercoController.js"></script>
+    <script src="components/cadastro_terminal/cadastroTerminalController.js"></script>
+    <script src="components/cadastro_porto/cadastroPortoController.js"></script>
+
+    <script src="components/tela_monitoramento_rfb/monitoramentoRFBController.js"></script>
+    <script src="components/liberacao_descarga/liberacaoDescargaController.js"></script>
+    <script src="components/monitoramento_descarga/monitoramentoDescargaController.js"></script>
+    <script src="components/descarga_a_granel/descargaAGranelController.js"></script>
+    <script src="components/relatorio/relatorioController.js"></script>
+    <script src="components/descarga_liquidos/descargaLiquidosController.js"></script>
+    <script src="components/consulta_rf/consultaRFController.js"></script>
+    <script src="components/pesagem/pesagemController.js"></script>
+    <script src="components/rateio/rateioController.js"></script>
+    <script src="components/plano_descarga/planoDescargaController.js"></script>
+    <script src="components/ajuda/ajudaController.js"></script>
+    <script src="components/relatorio_diario_terminal/relatorioDiarioTerminalController.js"></script>
+    <script src="components/transferencia_pesagem/transferencia_pesagem.js"></script>
+
+
+    <!--  Plugin for Switches for Color Picker, full documentation here: https://github.com/Simonwep/pickr -->
+    <script src="assets/js/plugins/pickr.min.js"></script>
+    <!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+    <script src="assets/js/plugins/bootstrap-switch.js"></script>
+    <!--  Plugin for Sweet Alert -->
+    <script src="assets/js/plugins/sweetalert2.min.js"></script>
+    <!-- Forms Validations Plugin -->
+    <script src="assets/js/plugins/jquery.validate.min.js"></script>
+    <!--  Plugin for the Wizard, full documentation here: https://github.com/VinceG/twitter-bootstrap-wizard -->
+    <script src="assets/js/plugins/jquery.bootstrap-wizard.js"></script>
+    <!--	Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
+    <script src="assets/js/plugins/bootstrap-selectpicker.js"></script>
+    <!--  Plugin for the DateTimePicker, full documentation here: https://eonasdan.github.io/bootstrap-datetimepicker/ -->
+    <script src="assets/js/plugins/bootstrap-datetimepicker.js"></script>
+    <!--  DataTables.net Plugin, full documentation here: https://datatables.net/    -->
+    <script src="assets/js/plugins/jquery.dataTables.min.js"></script>
+    <!--  DataTables.net Reordering full documentation here: https://datatables.net/    -->
+    <script src="assets/js/plugins/dataTables.rowReorder.min.js"></script>
+    <!--	Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
+    <script src="assets/js/plugins/bootstrap-tagsinput.js"></script>
+    <!-- Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
+    <script src="assets/js/plugins/jasny-bootstrap.min.js"></script>
+    <!--  Full Calendar Plugin, full documentation here: https://github.com/fullcalendar/fullcalendar    -->
+    <script src="assets/js/plugins/fullcalendar.min.js"></script>
+    <!-- Vector Map plugin, full documentation here: http://jvectormap.com/documentation/ -->
+    <script src="assets/js/plugins/jquery-jvectormap.js"></script>
+    <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+    <script src="assets/js/plugins/nouislider.min.js"></script>
+    <!--  Google Maps Plugin    -->
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script> -->
+    <!-- Chart JS -->
+    <script src="assets/js/plugins/chartjs.min.js"></script>
+    <!-- JS Mask -->
+    <script src="assets/js/plugins/jquery.mask.js"></script>
+    <script src="assets/js/plugins/jquery.mask.min.js"></script>
+    <!--  Notifications Plugin    -->
+    <script src="assets/js/plugins/bootstrap-notify.js"></script>
+    <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
+    <!--<script src="assets/js/now-ui-dashboard.min.js?v=1.1.2" type="text/javascript"></script> -->
+    <!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
+    <script src="assets/demo/demo.js"></script>
+
+    <!--HighCharts-->
+    <script src="assets/js/plugins/highcharts.js"></script>
+    <script src="assets/js/plugins/exporting.js"></script>
+    <script src="assets/js/plugins/export-data.js"></script>
+
+    <script>
+
+        $("#menu li a").click(function () {
+            console.log("teatw");
+            $(this).parent().addClass('selected').siblings().removeClass('selected');
+
+        });
+
+        function showSwal(type) {
+
+            if (type == 'editar_perfil') {
+                swal({
+                    title: 'Editar Perfil',
+                    buttonsStyling: false,
+                    confirmButtonClass: "justify-content-center btn btn-success btn-round ",
+                    confirmButtonText: 'Salvar',
+                    width: "85%",
+                    html: '<div class="row">' +
+                        '<div class="col-md-4">' +
+                        '<label>Nome</label>' +
+                        '<div class="form-group">' +
+                        '<input type="text" class="form-control" name="info_porta_enxerto" placeholder="Nome...">' +
+                        '</div>' +
+                        '</div>' +
+
+                        '<div class="col-md-4">' +
+                        '<label>Departamento</label>' +
+                        '<div class="form-group">' +
+                        '<input type="text" class="form-control" name="info_nome_cientifico" placeholder="Departamento...">' +
+                        '</div>' +
+                        '</div>' +
+
+                        '<div class="col-md-4">' +
+                        '<label>Cargo</label>' +
+                        '<div class="form-group">' +
+                        '<input type="text" class="form-control" name="info_nome_comum" placeholder="Cargo...">' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>' +
+
+                        '<div class="row">' +
+                        '<div class="col-md-4">' +
+                        '<label>ID</label>' +
+                        '<div class="form-group">' +
+                        '<input type="text" class="form-control" name="info_categoria" placeholder="ID...">' +
+                        '</div>' +
+                        '</div>' +
+
+                        '<div class="col-md-4">' +
+                        '<label>Acesso</label>' +
+                        '<div class="form-group">' +
+                        '<input type="text" class="form-control" name="info_municipio_coleta" placeholder="Acesso...">' +
+                        '</div>' +
+                        '</div>' +
+
+                        '<div class="col-md-4">' +
+                        '<label>Senha</label>' +
+                        '<div class="form-group">' +
+                        '<input type="text" class="form-control" name="info_criterio_selecao" placeholder="Senha...">' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>',
+                    onOpen: () => {
+
+
+                    }
+                }).catch(swal.noop);
+
+                var options = "";
+
+                $.each(container, function (key, value) {
+                    options += "<option>" + value + "</option>";
+                });
+            }
+
+            if (type == 'editar_navio') {
+                swal({
+                    title: 'Editar Navio',
+                    buttonsStyling: false,
+                    confirmButtonClass: "justify-content-center btn btn-success btn-round ",
+                    confirmButtonText: 'Salvar',
+                    width: "85%",
+                    html: '<div class="row">' +
+                        '<div class="col-md-4">' +
+                        '<label>Nome</label>' +
+                        '<div class="form-group">' +
+                        '<input type="text" class="form-control" name="info_porta_enxerto" placeholder="Nome...">' +
+                        '</div>' +
+                        '</div>' +
+
+                        '<div class="col-md-4">' +
+                        '<label>Descrição</label>' +
+                        '<div class="form-group">' +
+                        '<input type="text" class="form-control" name="info_nome_cientifico" placeholder="Descrição...">' +
+                        '</div>' +
+                        '</div>' +
+
+                        '<div class="col-md-4">' +
+                        '<label>Tipo</label>' +
+                        '<div class="form-group">' +
+                        '<input type="text" class="form-control" name="info_nome_comum" placeholder="Tipo...">' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>',
+                    onOpen: () => {
+
+
+                    }
+                }).catch(swal.noop);
+
+                var options = "";
+
+                $.each(container, function (key, value) {
+                    options += "<option>" + value + "</option>";
+                });
+            }
+
+            if (type == 'editar_empresa') {
+                swal({
+                    title: 'Editar Empresa',
+                    buttonsStyling: false,
+                    confirmButtonClass: "justify-content-center btn btn-success btn-round ",
+                    confirmButtonText: 'Salvar',
+                    width: "85%",
+                    html: '<div class="row">' +
+                        '<div class="col-md-4">' +
+                        '<label>Nome</label>' +
+                        '<div class="form-group">' +
+                        '<input type="text" class="form-control" name="info_porta_enxerto" placeholder="Nome...">' +
+                        '</div>' +
+                        '</div>' +
+
+                        '<div class="col-md-4">' +
+                        '<label>Nome Fantasia</label>' +
+                        '<div class="form-group">' +
+                        '<input type="text" class="form-control" name="info_nome_cientifico" placeholder="Nome Fantasia...">' +
+                        '</div>' +
+                        '</div>' +
+
+                        '<div class="col-md-4">' +
+                        '<label>Tipo de Serviço</label>' +
+                        '<div class="form-group">' +
+                        '<input type="text" class="form-control" name="info_nome_comum" placeholder="Tipo de Serviço...">' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>' +
+
+                        '<div class="row">' +
+                        '<div class="col-md-4">' +
+                        '<label>CNPJ</label>' +
+                        '<div class="form-group">' +
+                        '<input type="text" class="form-control" name="info_categoria" placeholder="CNPJ...">' +
+                        '</div>' +
+                        '</div>' +
+
+                        '<div class="col-md-8">' +
+                        '<label>Inscrição Estadual</label>' +
+                        '<div class="form-group">' +
+                        '<input type="text" class="form-control" name="info_municipio_coleta" placeholder="Inscrição Estadual...">' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>',
+                    onOpen: () => {
+
+
+                    }
+                }).catch(swal.noop);
+
+                var options = "";
+
+                $.each(container, function (key, value) {
+                    options += "<option>" + value + "</option>";
+                });
+            }
+
+            if (type == 'editar_di') {
+                swal({
+                    title: 'Editar DI',
+                    buttonsStyling: false,
+                    confirmButtonClass: "justify-content-center btn btn-success btn-round ",
+                    confirmButtonText: 'Salvar',
+                    width: "85%",
+                    html: '<div class="row">' +
+                        '<div class="col-md-4">' +
+                        '<label>DI</label>' +
+                        '<div class="form-group">' +
+                        '<input type="text" class="form-control" name="info_porta_enxerto" placeholder="DI...">' +
+                        '</div>' +
+                        '</div>' +
+
+                        '<div class="col-md-4">' +
+                        '<label>Produto</label>' +
+                        '<div class="form-group">' +
+                        '<input type="text" class="form-control" name="info_nome_cientifico" placeholder="Importador...">' +
+                        '</div>' +
+                        '</div>' +
+
+                        '<div class="col-md-4">' +
+                        '<label>Quantidade</label>' +
+                        '<div class="form-group">' +
+                        '<input type="text" class="form-control" name="info_nome_comum" placeholder="Tipo de Serviço...">' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>' +
+
+                        '<div class="row">' +
+                        '<div class="col-md-4">' +
+                        '<label>Empresa</label>' +
+                        '<div class="form-group">' +
+                        '<input type="text" class="form-control" name="info_categoria" placeholder="CNPJ...">' +
+                        '</div>' +
+                        '</div>' +
+
+                        '<div class="col-md-8">' +
+                        '<label>Site</label>' +
+                        '<div class="form-group">' +
+                        '<input type="text" class="form-control" name="info_municipio_coleta" placeholder="Inscrição Estadual...">' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>',
+                    onOpen: () => {
+
+
+                    }
+                }).catch(swal.noop);
+
+                var options = "";
+
+                $.each(container, function (key, value) {
+                    options += "<option>" + value + "</option>";
+                });
+
+            }
+
+            if (type == 'incluir_quantidade') {
+                swal({
+                    title: 'Efetuar Rateio',
+                    buttonsStyling: false,
+                    confirmButtonClass: "justify-content-center btn btn-success btn-round ",
+                    confirmButtonText: 'Salvar',
+                    width: "85%",
+                    html: '<div class="row justify-content-center">' +
+                        '<div class="col-md-4">' +
+                        '<label>Do Draft</label>' +
+                        '<div class="form-group">' +
+                        '<input type="text" class="form-control" name="info_porta_enxerto" disabled placeholder="32423423...">' +
+                        '</div>' +
+                        '</div>' +
+
+                        '<div class="col-md-4">' +
+                        '<label>Para o Draft</label>' +
+                        '<div class="form-group">' +
+                        '<input type="text" class="form-control" name="info_nome_cientifico" disabled placeholder="3124123...">' +
+                        '</div>' +
+                        '</div>' +
+
+                        '<div class="col-md-4">' +
+                        '<label>Quantidade</label>' +
+                        '<div class="form-group">' +
+                        '<input type="text" class="form-control" name="info_nome_comum" placeholder="Quantidade...">' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>',
+                    onOpen: () => {
+
+
+                    }
+                }).catch(swal.noop);
+
+                var options = "";
+
+                $.each(container, function (key, value) {
+                    options += "<option>" + value + "</option>";
+                });
+            }
+
+            if (type == 'incluir_draft') {
+                swal({
+                    title: 'Incluir Draft',
+                    buttonsStyling: false,
+                    confirmButtonClass: "justify-content-center btn btn-success btn-round ",
+                    confirmButtonText: 'Salvar',
+                    width: "85%",
+                    html: '<div class="row">' +
+                        '<div class="col-md-4">' +
+                        '<label>Nome da Barcaça</label>' +
+                        '<select type="text" class="form-control">' +
+                        '<option value="Todos">Fighter</option>' +
+                        '<option value="MQ1">Yara</option>' +
+                        '<option value="MQ1">Yara 2</option>' +
+                        '</select>' +
+                        '</div>' +
+
+                        '<div class="col-md-4">' +
+                        '<label>Responsável pelo Laudo</label>' +
+                        '<div class="form-group">' +
+                        '<select type="text" class="form-control">' +
+                        '<option value="Todos">Rodrigo</option>' +
+                        '<option value="MQ1">Yara</option>' +
+                        '<option value="MQ1">Yara 2</option>' +
+                        '</select>' +                        
+                        '</div>' +
+                        '</div>' +
+
+                        '<div class="col-md-4">' +
+                        '<label>Peso Draft</label>' +
+                        '<div class="form-group">' +
+                        '<input type="text" class="form-control" name="info_nome_cientifico" placeholder="Peso Draft...">' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>',
+                    onOpen: () => {
+
+
+                    }
+                }).catch(swal.noop);
+
+                var options = "";
+
+                $.each(container, function (key, value) {
+                    options += "<option>" + value + "</option>";
+                });
+            }
+
+            if (type == 'editar_produto') {
+                swal({
+                    title: 'Editar Produto',
+                    buttonsStyling: false,
+                    confirmButtonClass: "justify-content-center btn btn-success btn-round ",
+                    confirmButtonText: 'Salvar',
+                    width: "85%",
+                    html: '<div class="row">' +
+                        '<div class="col-md-4">' +
+                        '<label>Nome</label>' +
+                        '<div class="form-group">' +
+                        '<input type="text" class="form-control" name="info_porta_enxerto" placeholder="Nome...">' +
+                        '</div>' +
+                        '</div>' +
+
+                        '<div class="col-md-4">' +
+                        '<label>Descrição</label>' +
+                        '<div class="form-group">' +
+                        '<input type="text" class="form-control" name="info_nome_cientifico" placeholder="Descrição...">' +
+                        '</div>' +
+                        '</div>' +
+
+                        '<div class="col-md-4">' +
+                        '<label>Tipo de Produto</label>' +
+                        '<div class="form-group">' +
+                        '<input type="text" class="form-control" name="info_nome_comum" placeholder="Tipo de Produto...">' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>' +
+
+                        '<div class="row">' +
+                        '<div class="col-md-4">' +
+                        '<label>Unidade de Medida</label>' +
+                        '<div class="form-group">' +
+                        '<input type="text" class="form-control" name="info_categoria" placeholder="Unidade de Medida...">' +
+                        '</div>' +
+                        '</div>' +
+
+                        '<div class="col-md-8">' +
+                        '<label>Observações</label>' +
+                        '<div class="form-group">' +
+                        '<input type="text" class="form-control" name="info_municipio_coleta" placeholder="Observações...">' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>',
+                    onOpen: () => {
+
+
+                    }
+                }).catch(swal.noop);
+
+                var options = "";
+
+                $.each(container, function (key, value) {
+                    options += "<option>" + value + "</option>";
+                });
+            }
+
+            if (type == 'cadastrar_di') {
+
+                swal({
+
+                    title: 'Cadastrar DI',
+
+                    buttonsStyling: false,
+
+                    showConfirmButton: false,
+
+                    width: "85%",
+
+                    html:
+
+                        '<div class="col-md-12">' +
+
+                        '<div class="card-stats">' +
+
+                        '<div class="card-body">' +
+
+
+                        '<div class="justify-content-center row">' +
+
+                        '<div class="form-group col-sm-4">' +
+
+                        '<label class="col-form-label">DI</label>' +
+
+                        '<input type="text" class="form-control" placeholder="DI...">' +
+
+                        '</div>' +
+
+                        '<div class="form-group col-sm-4">' +
+
+                        '<label class="col-form-label">Importador</label>' +
+
+                        '<select type="text" class="form-control">' +
+
+                        '<option value="Todos">SPI</option>' +
+
+                        '<option value="MQ1">Yara</option>' +
+
+                        '<option value="MQ1">Yara 2</option>' +
+
+                        '</select>' +
+
+                        '</div>' +
+
+                        '<div class="form-group col-sm-4">' +
+
+                        '<label class="col-form-label">Produto</label>' +
+
+                        '<select type="text" class="form-control">' +
+
+                        '<option value="Todos">Yara Live</option>' +
+
+                        '<option value="MQ1">Yara</option>' +
+
+                        '<option value="MQ1">Yara 2</option>' +
+
+                        '</select>' +
+
+                        '</div>' +
+
+                        '</div>' +
+
+                        '<div class="justify-content-center row">' +
+
+                        '<div class="form-group col-sm-4">' +
+
+                        '<label class="col-form-label">Quantidade</label>' +
+
+                        '<input type="text" class="form-control" placeholder="Quantidade...">' +
+
+                        '</div>' +
+
+                        '<div class="form-group col-sm-4">' +
+
+                        '<label class="col-form-label">Tipo de Descarga</label>' +
+
+                        '<select type="text" class="form-control">' +
+
+                        '<option value="Todos">Proporcional</option>' +
+
+                        '<option value="MQ1">Por DI</option>' +
+
+                        '</select>' +
+
+                        '</div>' +
+
+                        '<div class="form-group col-sm-4">' +
+
+                        '<label class="col-form-label">Ordenação</label>' +
+
+                        '<input type="text" class="form-control" placeholder="Ordenação...">' +
+
+                        '</div>' +
+
+                        '</div>' +
+
+                        '<div class="justify-content-center row">' +
+
+                        ' <button class="justify-content-center btn btn-success">Cadastrar</button>' +
+
+                        '</div>' +
+
+                        '</div>' +
+
+                        '</div>' +
+
+                        '</div>' +
+
+                        '</div>',
+
+                    onOpen: () => {
+
+
+
+
+
+                    }
+
+                }).catch(swal.noop);
+
+            }
+        }
+    </script>
+
+</body>
+
+</html>

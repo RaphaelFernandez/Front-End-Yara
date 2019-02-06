@@ -1,0 +1,99 @@
+<!--Title-->
+<div class="panel-header">
+    <div class="header text-left">
+        <h1 class="title" style="padding-top:16px;">Embarcações</h1>
+    </div>
+</div>
+<div class="content" ng-controller="cadastroEmbarcacaoController">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card card-stats">
+                <div class="card-body">
+                    <h5 class="card-title">Cadastro de Embarcações</h5>
+                    <div class="justify-content-center row">
+                        <div class="form-group col-sm-3">
+                            <label class="col-form-label">Nome</label>
+                            <input id="txtNome" type="text" class="form-control" placeholder="Nome...">
+                        </div>
+                        <div class="form-group col-sm-3">
+                            <label class="col-form-label">Nome Abreviado</label>
+                            <input id="txtAbreviado" type="text" class="form-control" placeholder="Nome Abreviado...">
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label class="col-form-label">Tipo</label>
+                            <select id="cmbTipo" type="text" class="form-control">
+                                <option value="1">Navio</option>
+                                <option value="2">Barcaça</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="justify-content-center row">
+                        <div class="form-group col-sm-6">
+                            <label class="col-form-label">Número IMO</label>
+                            <input type="text" id="txtIMO" class="form-control" placeholder="IMO...">
+                        </div>
+                        <div class="form-group col-sm-6">
+                                <label class="col-form-label">Pais</label>
+                                <select type="text" id="cmbPaisEmbarcacao" class="form-control">
+                                </select>
+                            </div>
+                    </div>
+                    <div class="justify-content-center row">
+                        <button class="justify-content-center btn btn-success" onclick="cadastrarNavio()">Cadastrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <div id="div_tabela">
+                        <table id="tblEmbarcacao" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">Nome</th>
+                                    <th class="text-center">Nome Abreviado</th>
+                                    <th class="text-center">Número IMO</th>
+                                    <th class="text-center">Pais</th>
+                                    <th class="text-center">Tipo</th>
+                                </tr>
+                            </thead>
+                            <tfoot>
+                                <tr>
+                                    <th class="text-center">Nome</th>
+                                    <th class="text-center">Nome Abreviado</th>
+                                    <th class="text-center">Número IMO</th>
+                                    <th class="text-center">Pais</th>
+                                    <th class="text-center">Tipo</th>
+                                </tr>
+                            </tfoot>
+                            <tbody>
+                                <tr>
+                                    <td class="text-center">Pérola Negra</td>
+                                    <td class="text-center">Piratas do Cáribe quem nunca</td>
+                                    <td class="text-center">Navios porta-barcaças</td>
+                                    <td class="text-center">
+                                        <button type="button" rel="tooltip" class="btn btn-simple btn-round btn-icon btn-sm"
+                                            onclick="showSwal('editar_navio')" data-original-title="" title="">
+                                            <i class="fa fa-edit"></i>
+                                        </button>
+                                        <button type="button" rel="tooltip" class="btn btn-simple btn-round btn-icon btn-sm "
+                                            data-original-title="" title="">
+                                            <i class="now-ui-icons ui-1_simple-remove"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- end content-->
+            </div>
+            <!--  end card  -->
+        </div>
+        <!-- end col-md-12 -->
+    </div>
+    <!-- end row -->
+</div>

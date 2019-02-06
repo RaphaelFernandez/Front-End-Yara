@@ -1,0 +1,75 @@
+            <!--Title-->
+            <div class="panel-header">
+                <div class="header text-left">
+                    <h1 class="title" style="padding-top:16px;">Usuários</h1>
+                </div>
+            </div>
+            <div class="content">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card card-stats">
+                            <div class="card-body">
+                                <h5 class="card-title">Cadastro de Usuário</h5>
+                                <div class="justify-content-center row">
+                                    <div class="form-group col-sm-3">
+                                        <label class="col-form-label">Nome</label>
+                                        <input id="cadastraUsuarioNome" type="text" class="form-control" placeholder="Nome..." autocomplete="new-password">
+                                    </div>
+                                    <div class="form-group col-sm-3">
+                                        <label class="col-form-label">Departamento</label>
+                                        <select id="cadastraUsuarioDepartamento" type="text" class="form-control"></select>
+                                    </div>
+                                    <div class="form-group col-sm-3">
+                                        <label class="col-form-label">Acesso</label>
+                                        <select id="cadastraUsuarioAcesso" type="text" class="form-control"></select>
+                                    </div>
+
+                                    <div class="form-group col-sm-3">
+                                        <label class="col-form-label">Cargo</label>
+                                        <input id="cadastraUsuarioCargo" type="text" class="form-control" placeholder="Cargo...">
+                                    </div>
+                                </div>
+                                <div class="justify-content-center row">
+                                    <div class="form-group col-sm-4">
+                                        <label class="col-form-label">Email</label>
+                                        <input id="cadastraUsuarioEmail" type="text" class="form-control" placeholder="Email...">
+                                    </div>
+                                    <div class="form-group col-sm-4">
+                                        <label class="col-form-label">Login</label>
+                                        <input id="cadastraUsuarioLogin" type="text" class="form-control" placeholder="Login...">
+                                    </div>
+                                    <div class="form-group col-sm-4">
+                                            <label class="col-form-label">Senha</label>
+                                            <input id="cadastraUsuarioSenha" type="password" class="form-control" placeholder="Senha..."  autocomplete="new-password">
+                                        </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h4 class="card-title">Assinatura</h4>
+                                        <div class="fileinput fileinput-new text-center" data-provides="fileinput">
+                                            <div class="fileinput-new thumbnail">
+                                                <img src="assets/img/image_placeholder.jpg" alt="..." >
+                                                
+                                            </div>
+                                            <div class="fileinput-preview fileinput-exists thumbnail" id="imgUsuario"></div>
+                                            <div>
+                                                <span class="btn btn-rose btn-round btn-file">
+                                                <span class="fileinput-new">Selecionar Assinatura</span>
+                                                <span class="fileinput-exists">Alterar</span>
+                                                <input type="file" name="..." />
+                                                </span>
+                                                <a href="#pablo" class="btn btn-danger btn-round fileinput-exists" data-dismiss="fileinput"><i class="fa fa-times"></i> Remover</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="justify-content-center row">
+                                    <button type ="button" onclick="cadastraUsuario()" class="justify-content-center btn btn-success">Cadastrar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" id="divTabelaUsuario"></div>
+            </div>

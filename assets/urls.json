@@ -1,0 +1,90 @@
+
+{
+
+    "////////////////URL OPERAÇÃO/////////////////////////":"",
+    "urlGetBerco":"http://192.168.11.252:10001/descargaberco?berco=",
+    "urlGetTotal":"http://192.168.11.252:10001/plano?berco=",
+    "urlGetProduto":"http://192.168.11.252:10001/produto?berco=",
+    "urlStatusDi" :"http://192.168.11.252:10000/di",
+    "urlGetDiBerco" :"http://192.168.11.252:10001/descarga?berco=",
+    "urlGetUsuarioReceita" :"http://192.168.11.252:10001/usuario?nm_abreviado=",
+    "urlGetBarcaca":"http://192.168.11.252:10000/embarcacao",
+    "urlStatusRF":"http://192.168.11.252:10000/descarga",
+    "urlAtracacao":"http://192.168.11.252:10000/atracacao",
+    "urlDraft":"http://192.168.11.252:10000/draft",
+
+    "////////////////URL CADASTRO DE OPERAÇÃO/////////////////////////":"",
+    "urlGetNavio":"http://192.168.11.252:10000/embarcacao",
+    "urlGetAgencia":"http://192.168.11.252:10000/agencia",
+    "urlGetRF":"http://192.168.11.252:10000/descarga",
+    "urlGetEmpresa":"http://192.168.11.252:10000/empresa",
+    "urlGetCarga":"http://192.168.11.252:10000/carga",
+    "urlGetMedidor":"http://192.168.11.252:10000/medidor",
+    "urlGetPorto":"http://192.168.11.252:10000/porto",
+    "urlGetDi":"http://192.168.11.252:10000/di?descargaid",
+    "urlGetTerminal":"http://192.168.11.252:10000/terminal",
+    "urlPostRF":"http://192.168.11.252:10000/descarga",
+    "urlPostDi":"http://192.168.11.252:10000/di",
+    "urlDeleteDi":"http://192.168.11.252:10000/di",
+    "urlUpdateDi":"http://192.168.11.252:10000/di",
+    "urlUpdateDescarga":"http://192.168.11.252:10000/descarga",
+    "urlSequenciaDi":"http://192.168.11.252:10000/di/changeseq",
+
+
+    "////////////////URL CADASTRO USUARIO/////////////////////////":"",
+    "urlGetDepartamento":"http://192.168.11.252:10000/departamento ",
+    "urlGetUsuario":"http://192.168.11.252:10000/usuario",
+    "urlPutCadastraUsuario":"http://192.168.11.252:10000/usuario",
+    "urlPutEditaUsuario":"http://192.168.11.252:10000/usuario",
+    "urlDeletaUsuario":"http://192.168.11.252:10000/usuario",
+    "urlGetPerfil":"http://192.168.11.252:10000/perfil",
+
+    "////////////////URL CADASTRO EMPRESA/////////////////////////":"",
+    "urlCadastrarEmpresa" : "http://192.168.11.252:10000/empresa",
+    "urlCadastrarEmpresaSite" : "http://192.168.11.252:10000",
+    "urlTabelaEmpresaSite" : "http://192.168.11.252:10000",
+    "urlUpdateEmpresa" : "http://192.168.11.252:10000",
+    "urlUpdateEmpresaSite" : "http://192.168.11.252:10000",
+    "urlPutEmpresaSite" : "http://192.168.11.252:10000",
+    "urlDeleteEmpresaSite" : "http://192.168.11.252:10000",
+
+    "urlLiberacao":"http://yara-vm:8098/descarga/",
+
+    "urlCadastrarTolerancia":"http://yara-vm:8099/executarateio",
+    "urlTabelaTolerancia":"http://yara-vm:8099/executarateio",
+
+    "urlCadastrarProdutos":"http://192.168.11.252:10000/carga",
+    "urlTabelaProdutos":"http://192.168.11.252:10000/carga",
+    "urlPutProdutos":"http://192.168.11.252:10000/carga",
+    "urlDeleteProdutos":"http://192.168.11.252:10000/carga",
+
+    "urlTolerancia":"http://192.168.11.252:10000/tolerancia",
+
+    "urlPorto":"http://192.168.11.252:10000/porto",
+
+    "urlPais":"http://192.168.11.252:10000/pais",
+
+    "urlEmbarcacao":"http://192.168.11.252:10000/embarcacao",
+
+    "urlProduto":"http://192.168.11.252:10000/carga",
+    "urlTipoProduto":"http://192.168.11.252:10000/tipocarga",
+
+    "urlPortoTerminal":"http://192.168.11.252:10000/terminal",
+
+    "urlEscalaDi":"http://192.168.11.252:10001/rateio?escala_rf=",
+
+    "urlRateio":"http://192.168.11.252:10001/rateio",
+    "urlCalculaRateio":"http://192.168.11.252:10001/calcularateio",
+    "urlAnalisar":"http://192.168.11.252:10001/descarga/",
+
+    "urlTransPesagem":"http://192.168.11.252:10001/transpesagem",
+
+    "urlMedidor":"http://192.168.11.252:10000/medidor",
+
+    "urlDescarga":"http://192.168.11.252:10000/descarga",
+
+    "urlBerco":"http://192.168.11.252:10000/berco"
+    
+
+    
+}

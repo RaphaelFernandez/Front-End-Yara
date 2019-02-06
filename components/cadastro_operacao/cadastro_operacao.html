@@ -1,0 +1,43 @@
+<!--Title-->
+<div class="panel-header">
+    <div class="header text-left">
+        <h1 class="title" style="padding-top:16px;">Operação</h1>
+    </div>
+</div>
+<div class="content">
+
+    <!-- CADASTRO/CONSULTA RF-->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card card-stats">
+                <div class="card-body">
+                    <h5 class="card-title">Cadastro/Seleção de Operação</h5>
+                    <div class="justify-content-center row">
+                        <div class="form-group col-sm-4">
+                            <label class="col-form-label">Escala RF</label>
+                            <input type="text" id="txtNome" class="form-control" placeholder="Escala RF...">
+                        </div>
+                        <div class="form-group col-sm-4">
+                            <label class="col-form-label">Navio</label>
+                            <select id="rfNavio" type="text" class="form-control"></select> </div>
+                        <div class="form-group col-sm-4">
+                            <label class="col-form-label">Agência</label>
+                            <select id="rfAgencia" type="text" class="form-control"></select>
+                            
+                        </div>
+                    </div>
+                    <div class="card-footer text-right">
+                        <button class="justify-content-center btn btn-info" onclick="consultaRF()">Consultar</button>
+                        <button class="justify-content-center btn btn-success" onclick="cadastraRF()">Cadastrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--CADASTRO DE DI-->
+    <div class="row" id="cadastroDi"></div>
+
+    <!-- TABELA DE DIS-->
+    <div class="row" id="tabela_di"></div>
+</div>

@@ -1,0 +1,129 @@
+<!--Title-->
+<div class="panel-header">
+    <div class="header text-left">
+        <h1 class="title" style="padding-top:16px;">Pesagem</h1>
+    </div>
+</div>
+<div class="content" ng-controller="pesagemController">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card card-stats">
+                <div class="card-body">
+                    <div class="justify-content-center row">
+                        <div class="form-group col-sm-4">
+                            <label class="col-form-label">Data Inicio</label>
+                            <input id="txtDataInicio" type="text" class="form-control datepicker" placeholder="Data Início...">
+                        </div>
+                        <div class="form-group col-sm-4">
+                            <label class="col-form-label">Data Fim</label>
+                            <input id="txtDataFim" type="text" class="form-control datepicker" placeholder="Data Fim...">
+                        </div>
+                        <div class="form-group col-sm-4">
+                            <label class="col-form-label">Medidor</label>
+                            <select type="text" id="cmbMedidor" class="form-control">
+                                <option value="Todos">Selecione</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="justify-content-center row">
+                        <button onclick="montaTabelaPesagem()" class="btn btn-primary">Buscar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+
+                    <div class="justify-content-center row">
+                        <div class="form-group col-sm-2">
+                            <div class="font-icon-detail">
+                                <hr>
+                                <h6 class="text-center">Vincular <span id="numPesagens">0</span> pesagens</br> a determinada di:</h6>
+                                <hr>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-sm-4">
+                                <label class="col-form-label">Escala RF</label>
+                                <select type="text" onchange="selectPesagemDi()" id="cmbEscalaRF" class="form-control">
+                                    <option value="Todos">Selecione</option>
+                                </select>
+                            </div>
+                        <div class="form-group col-sm-4">
+                                <label class="col-form-label">Di</label>
+                                <select type="text" id="cmbDi" class="form-control">
+                                    <option value="Todos">Selecione</option>
+                                </select>
+                            </div>
+                        <div class="form-group col-sm-2">
+                            <div>
+                                <label>&nbsp</label>
+                            </div>
+                            <button onclick="montaTabelaPesagem()" class="btn btn-success">Vincular</button>
+                        </div>
+                    </div>
+
+                    <div id="div_tabela">
+                        <table id="example" class="display" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>Data/Hora</th>
+                                    <th>Peso</th>
+                                    <th>Di</th>
+                                    <th>Medidor</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Tiger Nixon</td>
+                                    <td>System Architect</td>
+                                    <td>Edinburgh</td>
+                                    <td>61</td>
+                                </tr>
+                                <tr>
+                                    <td>Garrett Winters</td>
+                                    <td>Accountant</td>
+                                    <td>Tokyo</td>
+                                    <td>63</td>
+                                </tr>
+                                <tr>
+                                    <td>Ashton Cox</td>
+                                    <td>Junior Technical Author</td>
+                                    <td>San Francisco</td>
+                                    <td>66</td>
+                                </tr>
+                                <tr>
+                                    <td>Cedric Kelly</td>
+                                    <td>Senior Javascript Developer</td>
+                                    <td>Edinburgh</td>
+                                    <td>22</td>
+                                </tr>
+                                <tr>
+                                    <td>Airi Satou</td>
+                                    <td>Accountant</td>
+                                    <td>Tokyo</td>
+                                    <td>33</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>Data/Hora</th>
+                                    <th>Peso</th>
+                                    <th>Di</th>
+                                    <th>Medidor</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+                <!-- end content-->
+            </div>
+            <!--  end card  -->
+        </div>
+        <!-- end col-md-12 -->
+    </div>
+    <!-- end row -->
+</div>

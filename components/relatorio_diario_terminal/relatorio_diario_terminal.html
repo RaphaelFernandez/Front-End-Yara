@@ -1,0 +1,72 @@
+            <!--Title-->
+            <div class="panel-header"></div>
+            <div class="content" ng-controller="relatorioDiarioTerminalController">
+                    <div class="row">
+                            <div class="col-md-12">
+                                <div class="card card-stats">
+                                    <div class="card-body">
+                                        <h3 class="card-title text-center">Selecionar</h3>
+                                            <div class="justify-content-center row">
+                                                    <div class="form-group col-sm-6">
+                                                            <label class="col-form-label">Dia</label>
+                                                            <select type="text" class="form-control">
+                                                                <option value="Todos">19/01/2019</option>
+                                                                <option value="MQ1">Yara</option>
+                                                                <option value="MQ1">Yara 2</option>
+                                                            </select></div>
+                                                </div>
+                                            <div class="justify-content-center row">
+                                            <button class="justify-content-center btn btn-primary">Buscar Dados</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <table id="datatable" class="table table-striped table-bordered table-hover" cellspacing="0" width="100%">
+                                    <h4>Planilha Diária de Terminal</h4>
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center">Navio</th>
+                                            <th class="text-center">Atracação</th>
+                                            <th class="text-center">Berço</th>
+                                            <th class="text-center">Produto</th>
+                                            <th class="text-center">Descarga do Dia Anterior</th>
+                                            <th class="text-center">Total p/ Produto</th>
+                                            <th class="text-center">Quantidade Manifestada</th>
+                                            <th class="text-center">Saldo a Descarregar</th>
+                                            <th class="text-center">Termino ou Previsão de Término</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center">Fighter</td>
+                                            <td class="text-center">23/10/2018 08:05</td>
+                                            <td class="text-center">Norte</td>
+                                            <td class="text-center">Tsp gr</td>
+                                            <td class="text-center">3.261,915</td>
+                                            <td class="text-center">22.549,360</td>
+                                            <td class="text-center">25.161,580</td>
+                                            <td class="text-center">2.612,220</td>
+                                            <td class="text-center">01/11/2018 12:00</td>
+                                        </tr>            
+                                    </tbody>
+                                </table>
+
+                                    <div class="justify-content-center row">
+                                            <button id="pdf_button" class="justify-content-center btn btn-success">Gerar</button>
+                                        </div>
+                            </div>
+                            
+                           
+                            <!-- end content-->
+                        </div>
+                        <!--  end card  -->
+                    </div>
+                    <!-- end col-md-12 -->
+                </div>
+                <!-- end row -->
+            </div>
